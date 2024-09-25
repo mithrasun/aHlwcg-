@@ -1,0 +1,15 @@
+
+HyprLand:
+    kitty
+    ranger
+    mpvpaper
+    rofi-wayland
+    wlogout
+    imv
+
+Waybar
+    -sofware:
+      pavucontrol
+
+    -fonts:
+      ttf-nerd-fonts-symbols
