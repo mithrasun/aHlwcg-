@@ -1,0 +1,124 @@
+//
+//  █     █░ ▄▄▄     ▓██   ██▓ ▄▄▄▄    ▄▄▄       ██▀███  
+// ▓█░ █ ░█░▒████▄    ▒██  ██▒▓█████▄ ▒████▄    ▓██ ▒ ██▒
+// ▒█░ █ ░█ ▒██  ▀█▄   ▒██ ██░▒██▒ ▄██▒██  ▀█▄  ▓██ ░▄█ ▒
+// ░█░ █ ░█ ░██▄▄▄▄██  ░ ▐██▓░▒██░█▀  ░██▄▄▄▄██ ▒██▀▀█▄  
+// ░░██▒██▓  ▓█   ▓██▒ ░ ██▒▓░░▓█  ▀█▓ ▓█   ▓██▒░██▓ ▒██▒
+// ░ ▓░▒ ▒   ▒▒   ▓▒█░  ██▒▒▒ ░▒▓███▀▒ ▒▒   ▓▒█░░ ▒▓ ░▒▓░
+//   ▒ ░ ░    ▒   ▒▒ ░▓██ ░▒░ ▒░▒   ░   ▒   ▒▒ ░  ░▒ ░ ▒░
+//   ░   ░    ░   ▒   ▒ ▒ ░░   ░    ░   ░   ▒     ░░   ░ 
+//     ░          ░  ░░ ░      ░            ░  ░   ░     
+//                    ░ ░           ░                    
+// 
+// fonts
+// ttf-nerd-fonts-symbols
+
+
+{
+"height": 24,
+"spacing": 4,
+
+"modules-left": [
+	"custom/logo",
+	"hyprland/window",
+	"mpris"
+
+    ],
+"modules-center": [
+	"hyprland/workspaces"
+    ],
+"modules-right":[
+	"cpu",
+	"clock",
+	"pulseaudio",
+	"battery"
+],
+
+//
+// .-.  .-. .---. .----. .-. .-..-.   .----. .----. 
+// }  \/  {/ {-. \} {-. \| } { |} |   } |__}{ {__-` 
+// | {  } |\ '-} /} '-} /\ `-' /} '--.} '__}.-._} } 
+// `-'  `-' `---' `----'  `---' `----'`----'`----'  
+//
+//
+
+"custom/logo":{
+	"format":"󰣇 ",
+	"tooltip":false,
+	"on-click":"kitty -e sh -c 'neofetch; exec $SHELL'",
+	"on-click-right":"kitty -e sh -c 'hyfetch; exec $SHELL'"
+},
+"hyprland/window":{
+	"format":"{initialClass}",
+	"tooltip":true,
+	"rewrite":{
+	  "kitty":" ",
+	  "Chromium":" ",
+	  "vesktop":" ",
+	  "imv":" ",
+	  "vlc":"󰕼 ",
+	  "mpv":" "
+	},
+	"separate-outputs": true
+},
+//  
+"mpris": {
+ 	"format": " {status_icon} {dynamic} ",
+        "interval": 1,
+        "dynamic-len": 40,
+	"status-icons": {
+		"playing": "▶",
+		"paused": "",
+		"stopped": ""
+	},
+	"dynamic-order": ["title", "artist"],
+	"ignored-players": ["firefox"], //,"chromium"],
+	"tooltip": false
+},
+
+"hyprland/workspaces":{
+	"format":"{icon}",
+	"format-icons":{
+		"1":"󰽥",
+		"2":"󰽦",
+		"3":" 󰽢 ",
+		"4":"󰽨",
+		"5":"󰽧"
+	},
+	"persistent-workspaces": {
+		"*":5
+	}
+},
+
+"cpu": {
+    "on-click": "kitty -e btop",
+    "format": " {usage}%",
+    "tooltip": false,
+    "interval": 2
+},
+"battery":{
+	"interval":30,
+	"format":"{icon} {capacity}%",
+	"format-icons":["","","","",""]
+},
+"pulseaudio":{
+	"format":"{icon}",
+	"tooltip":false,
+	"format-bluetooth":"󰂯 ",
+	"format-muted":" ",
+	"format-icons":{
+	"default":" ",
+	"headphones":" "
+	},
+	"on-click":"pavucontrol",
+	"on-click-right":"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+},
+"clock":{
+	"interval":60,
+	"timezone":"America/Santiago",
+	"toltip": false,
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+}
+
+}
