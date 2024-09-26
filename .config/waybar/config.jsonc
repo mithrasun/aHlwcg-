@@ -57,7 +57,8 @@
 	  "vesktop":" ",
 	  "imv":" ",
 	  "vlc":"󰕼 ",
-	  "mpv":" "
+	  "mpv":" ",
+	  "nemo":" "
 	},
 	"separate-outputs": true
 },
