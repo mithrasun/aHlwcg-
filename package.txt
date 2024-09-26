@@ -1,15 +1,41 @@
 
 HyprLand:
-    kitty
-    ranger
-    mpvpaper
-    rofi-wayland
-    wlogout
-    imv
+    Terminal
+	bash
+	kitty
+	grim - screenshot
+	*imv - imagen vew
+	*ranger - file manager
+	*neovim - text editor
+    Text Editor
+	neovim
+    File Manager
+	ranger
+	nemo
+    Media
+	imv
+	mpv
+    Wallpapers
+	hyprpaper/waypaper
+	mpvpaper
+    App Launcher
+	rofi-wayland
+    Notification
+	dunst
+    LogOut
+	wlogout
+    GTK 
+        gtk dracula - theme
+        gtk Papirus - icons
+
+Fonts
+    noto-fonts
+    noto-fonts-emoji
+    adobe-source-code-pro-fonts
+    ttf-nerd-fonts-symbols
 
 Waybar
     -sofware:
       pavucontrol
-
     -fonts:
       ttf-nerd-fonts-symbols
