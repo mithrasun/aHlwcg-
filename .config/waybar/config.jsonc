@@ -53,6 +53,7 @@
 	"tooltip":true,
 	"rewrite":{
 	  "kitty":" ",
+	  "firefox":"󰈹 ",
 	  "Chromium":" ",
 	  "vesktop":" ",
 	  "imv":" ",
