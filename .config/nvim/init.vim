@@ -6,11 +6,14 @@ set encoding=utf-8
 set showmatch
 set sw=2
 
-"create directory autoload
 call plug#begin('~/.vim/plugged')
 
+"transparent
+Plug 'tribela/transparent.nvim'
+
 " Theme
-Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/gruvbox-material'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
@@ -25,12 +28,19 @@ Plug 'hrsh7th/nvim-cmp'
 call plug#end()
 
 " Config GruvBox
-set background=dark
-let g:gruvbox_material_background='medium'
-colorscheme gruvbox-material
+"set background=dark
+"let g:gruvbox_material_background='medium'
+"colorscheme gruvbox-material
+
+colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+
 
 " Config LSP
 lua<< EOF
+
+
+
+require('transparent').setup({})
 
 require'lspconfig'.pyright.setup{}
 
