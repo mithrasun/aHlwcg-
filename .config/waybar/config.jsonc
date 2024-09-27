@@ -59,7 +59,9 @@
 	  "imv":" ",
 	  "vlc":"󰕼 ",
 	  "mpv":" ",
-	  "nemo":" "
+	  "nemo":" ",
+	  "Spotify":" ",
+	  "org.pulseaudio.pavucontrol":" "
 	},
 	"separate-outputs": true
 },
